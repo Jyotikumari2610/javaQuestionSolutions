@@ -214,3 +214,49 @@ Output:-
   5
   120
 === Code Execution Successful ===
+
+
+import java.util.*;
+public class Test2 {
+    public static void main(String args[]){
+            Scanner sc=new Scanner(System.in);
+            int n=sc.nextInt();
+            int arr[]=new int[n];
+            for(int i=0;i<n;i++){
+                arr[i]=sc.nextInt();
+            }
+            int target=sc.nextInt();
+            System.out.println(ceiling(arr,target));
+         }
+            static int ceiling(int arr[],int target){
+                int strt=0;
+                int end=arr.length-1;
+                if(target>arr[end]){
+                    return -1;
+                }
+                while(strt<=end){
+                    int mid=strt+(end-strt)/2;
+                    if(arr[mid]==target){
+                        return mid;
+                    }
+                    else if(arr[mid]<target){
+                        strt=mid+1;
+                    }
+                    else{
+                        end=mid-1;
+                }
+            }
+                return arr[strt];
+    }
+}
+
+Output:-
+    5
+    12
+    14
+    16
+    18
+    20
+    15
+    16
+=== Code Execution Successful ===  
