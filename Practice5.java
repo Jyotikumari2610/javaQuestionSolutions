@@ -4,8 +4,7 @@ public class Solution{
         int a=87,b=98,c=78;
         Solution obj=new Solution();
         System.out.println(obj.maxNos(a,b,c));
-        System.out.println(obj.minNos(a,b,c));
-        
+        System.out.println(obj.minNos(a,b,c));   
     }
     static int maxNos(int a,int b,int c){
         int max=0;
