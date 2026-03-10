@@ -38,7 +38,7 @@ Output:-
   78
 === Code Execution Successful ===
 
-  import java.util.*;
+import java.util.*;
 public class Solution{
     public static void main(String args[]){
         int a=876156;
