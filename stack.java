@@ -7,11 +7,9 @@ class Node {
         this.next = null;
     }
 }
-
 class StackLinkedList {
     Node top;  
-
-   
+  
     public void push(int data) {
         Node newNode = new Node(data);
         newNode.next = top;  
