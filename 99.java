@@ -16,7 +16,6 @@ output
 3
 Odd
 
-
 import java.util.*;
 public class W01_ass_2{
     public static void main(String args[]){
@@ -75,7 +74,6 @@ output
 10 * 2 = 20
 10 * 3 = 30
 10 * 4 = 40
-
 
 import java.util.*;
 public class W01_P5{
