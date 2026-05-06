@@ -33,11 +33,13 @@ public class Solution{
     return min;
     }
 }
+
 Output:-
   98
   78
 === Code Execution Successful ===
 
+    
 import java.util.*;
 public class Solution{
     public static void main(String args[]){
@@ -53,6 +55,7 @@ public class Solution{
         }
     }
 }
+
 Output:-
   876156 is even
 === Code Execution Successful ===
@@ -73,6 +76,7 @@ public class Solution{
         }
     }
 }
+
 Output:-
   65
   65 is eligible to vote.
@@ -92,6 +96,7 @@ public class Solution{
         return sum;
     }
 }
+
 Output:-
   87
   90
@@ -112,6 +117,7 @@ public class Solution{
         return product;
     }
 }
+
 Output:-
   87
   3
@@ -132,6 +138,7 @@ public class Solution{
         System.out.println("Circumfrence of circle is: "+circum+"\n"+area+" is area of circle.");
     }
 }
+
 Output:-
   5
   Circumfrence of circle is: 31.400002
@@ -158,6 +165,7 @@ public class Solution{
         return true;
     }
 }
+
 Output:-
   97
   true
@@ -187,6 +195,7 @@ public class Solution{
         }
     }
 }
+
 Output:-
   55
   CC
@@ -209,6 +218,7 @@ public class Solution{
        return fact;
     }
 }
+
 Output:-
   5
   120
@@ -288,6 +298,7 @@ class Main {
         System.out.println(arr[end]);
     }
 }
+
 Output:-
     5
 45
