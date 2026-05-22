@@ -194,3 +194,75 @@ class PracticeCode {
         bubbleSort(arr);
     }
 }
+import java.util.*;
+public class Practice{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        //int n=sc.nextInt();
+        int arr[]={4,8,9,15,7,6};
+        //System.out.println(ReverseNo(n));
+        //System.out.println(factorial(n));
+        //System.out.println(PrimeNo(n));
+       // System.out.println(palindrome(n));
+       /*int result[]=largeSclargeEle(arr);
+       for(int i=0; i<result.length; i++){
+           System.out.println(result[i]);
+       }*/
+       System.out.println(revArrayWithout2ndArray(arr));
+    }
+    static int ReverseNo(int n){
+        int rev=0;
+        while(n>0){
+            int digit=n%10;
+            rev=rev*10+digit;
+            n=n/10;
+        }
+      return rev;
+    }
+    static int factorial(int n){
+        int fact=1;
+        for(int i=1;i<n;i++){
+            fact*=i;
+        }
+        return fact;
+    }
+    static boolean PrimeNo(int n){
+        if(n<=1){
+            return true;
+        }
+        for (int i=2;i<n;i++){
+        if(n%i==0 && n%n==0){
+            return false;
+        }
+        return true;
+        }
+        return true;
+    }
+    static boolean palindrome(int n){
+        int original=n;
+        return ReverseNo(n)==original;
+    }
+    static int[] largeSclargeEle(int arr[]){
+       int largest=Integer.MIN_VALUE;
+       int sclarge=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>largest){
+                sclarge=largest;
+                largest=arr[i];
+            }
+            else if(arr[i]>sclarge && arr[i]!=largest){
+                sclarge= arr[i];
+            }
+        }
+        return new int[]{sclarge, largest};
+    }
+    static int revArrayWithout2ndArray(int arr[]){
+        int n=arr.length;
+        int rev=0;
+         for(int i=0;i<n;i++){
+             int original=arr[i];
+             rev=ReverseNo(n);
+         }
+        return arr;
+   }
+}
