@@ -266,3 +266,28 @@ public class Practice{
         return arr;
    }
 }
+public class RadhaHeart {
+
+    public static void main(String[] args) {
+
+        String text = "राधा";
+
+        for (double y = 1.5; y > -1.5; y -= 0.1) {
+
+            for (double x = -1.5; x < 1.5; x += 0.05) {
+
+                double formula =
+                        Math.pow(x * x + y * y - 1, 3)
+                                - x * x * Math.pow(y, 3);
+
+                if (formula <= 0) {
+                    System.out.print(text);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
+    }
+}
