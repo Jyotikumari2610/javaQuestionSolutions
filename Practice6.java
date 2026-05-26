@@ -291,3 +291,113 @@ public class RadhaHeart {
         }
     }
 }
+import java .util.*;
+public class Solution{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        //int n=sc.nextInt();
+        //System.out.println(reverseNo(n));
+        //System.out.println(palindrome(n));
+        int arr[]={2,5,7,9,2,1,8};
+        //largeSclarge(arr);
+        //countEOno(arr);
+        int target=sc.nextInt();
+       // System.out.println(lSearch(arr));
+        //System.out.println(removeDuplicat(arr));
+        //String s1=sc.nextLine();
+        //String s2=sc.nextLine();
+        //System.out.println(Anagram(s1,s2));
+        System.out.println(bSearch(arr));
+        
+    }
+    static int reverseNo(int n){
+        int rev=0;
+        while(n>0){
+            int digit=n%10;
+            rev=rev*10+digit;
+            n=n/10;
+        }
+        return rev;
+    }
+    static boolean palindrome(int n){
+        int original=n;
+        return original==reverseNo(n);
+    }
+    static void largeSclarge(int arr[]){
+        int large=Integer.MIN_VALUE;
+        int sclarge=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>large){
+                sclarge=large;
+                large=arr[i];
+            }
+            else if(arr[i]!=large && arr[i]>sclarge){
+                sclarge=arr[i];
+            }
+        }
+       System.out.println(large);
+       System.out.println(sclarge);
+    }
+    static void countEOno(int arr[]){
+        int Ecount=0;
+        int Ocount=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]%2==0)
+            Ecount++;
+            else 
+            Ocount++;
+        }
+        System.out.println(Ecount);
+        System.out.println(Ocount);
+    }
+    static int lSearch(int arr[]){
+        int target=0;
+        for(int i=0;i>arr.length;i++){
+            if(arr[i]==target)
+            return i;
+        }
+     return -1;
+    }
+    static int removeDuplicat(int arr[]){
+        int duplicate=0;
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j])
+                duplicate++;
+            }
+        }
+     return duplicate;
+    }
+    static boolean Anagram(String s1, String s2){
+        s1=s1.toLowerCase();
+        s2=s2.toLowerCase();
+        
+        if(s1.length()!=s2.length()){
+            return false;
+        }
+        char A1[]=s1.toCharArray();
+        char A2[]=s2.toCharArray();
+        Arrays.sort(A1);
+        Arrays.sort(A2);
+        return Arrays.equals(A1,A2);
+    }
+    static int bSearch(int arr[]){
+        int target=0;
+        int start=arr[0];
+        int end=arr.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(arr[mid]==target){
+                return mid;
+            }
+            else if(arr[mid]<target){
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+     return -1;
+    }
+    
+}
