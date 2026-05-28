@@ -51,7 +51,6 @@ class PracticeCode {
 
         System.out.println();
     }
-
     // Reverse Number
     static void reverseNumber(int n) {
 
